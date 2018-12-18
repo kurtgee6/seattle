@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap source-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Font Awessome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+
+<style>
+body {
+    margin: 5px;
+}
+
+/* DROPDOWN STYLE START */
+.dropbtn {
+    background-color: #8fc8d6;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: rgb(94, 193, 218);}
+
+/* DROPDOWN STYLE END */
+
+/* TABLE STYLE START */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+/* TABLE STYLE END */
+
+.fa-plus {
+  color: green;
+}
+
+</style>
+
+<body>
+
+    <div class="container-fluid">
+        <div style="background-color: #8fc8d6; padding: 8px; margin-bottom: 5px; border-bottom: 1px solid black;">
+            <h3 style="text-align:center; color: black; margin: 0;">ADD MEMBERS TO CLUSTERS</h3>
+        </div>
+        <div class="row">
+
+            <div class="col-3" style="background-color: #f9f9f9">
+                <p style="margin-bottom: 10px;"><i>Hover to view list of clusters</i></p>
+                <div class="dropdown">
+                    <button class="dropbtn">Clusters</button>
+                        <div class="dropdown-content">
+                            <a href="#">Cluster 1</a>
+                            <a href="#">Cluster 2</a>
+                            <a href="#">Cluster 3</a>
+                        </div>
+                </div>
+            </div>
+      
+            <div class="col-9">
+                    <table>
+                            <tr>
+                              <th>Cluster</th>
+                              <th>Member(s)</th>
+                              <th>Timestamp</th>
+                            </tr>
+                            <tr>
+                              <td>Cluster 1</td>
+                              <td>Maria Anders<span style="float:right" data-target="#exampleModal" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i></span></td>
+                              <td>11/5/13 3:30:59 PM</td>
+                            </tr>
+                            <tr>
+                              <td>Cluster 2</td>
+                              <td>Add member(s)<span style="float:right" data-target="#exampleModal" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i></span></td>
+                              <td>3/3/16 3:30:59 PM</td>
+                            </tr>
+                            <tr>
+                              <td>Cluster 3</td>
+                              <td>Add member(s)<span style="float:right" data-target="#exampleModal" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i></span></td>
+                              <td>4/7/15 3:30:59 PM</td>
+                            </tr>
+                            <tr>
+                              <td>Cluster 4</td>
+                              <td>Helen Bennett<span style="float:right" data-target="#exampleModal" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i></span></td>
+                              <td>9/817 3:30:59 PM</td>
+                            </tr>
+                            <tr>
+                              <td>Cluster 5</td>
+                              <td>Add member(s)<span style="float:right" data-target="#exampleModal" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i></span></td>
+                              <td>2/5/16 3:30:59 PM</td>
+                            </tr>
+                          </table>
+                </div>
+            </div>
+                
+        </div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Invite to cluster</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <input style="margin-bottom: 5px;" type="text" name="email" value="Email Address">
+                <textarea rows="4" cols="50" name="comment" form="usrform">I'm working on this cluster and wanted to share it with you!</textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Send Invite</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- JQUERY source-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <!-- Bootstrap JS -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     
+
+</body>
+</html>

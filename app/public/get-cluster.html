@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap source-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Font Awessome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        margin: 10px;
+    }
+ 
+    * {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .first {
+        height: 700px;
+    }
+
+    .third {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .ol-container {
+        margin-top: 50%;
+        padding: 8px;
+        border-radius: 3px;
+        background-color: rgb(184, 227, 245);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .input-container {
+        margin-top: 18%;
+    }
+
+    input {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #button {
+        padding: 8px;
+        border-radius: 3px;
+        background-color: rgb(184, 227, 245);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+    }
+
+</style>
+
+<body>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 first">
+                    <div class="ol-container">
+                        <ol>
+                            <li>Input your email</li>
+                            <li>Click 'Assign me a cluster'</li>
+                            <li>Check your email for assigned Cluster</li>
+                        </ol>            
+                    </div>     
+                </div>
+                <div class="col-9 third">
+                    <div class="input-container">
+                        <form action="/get-user-cluster" method="POST">
+                            <input type="text" placeholder="Enter your email..." name="check_email">
+                            <br>
+                            <br>
+                            <button id="button">Assign me a cluster</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+     <!-- JQUERY source-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <!-- Bootstrap JS -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+
+</body>
+</html>
