@@ -41,7 +41,6 @@ router.post("/user-create", (req, res) => {
 
     const queryString = "INSERT INTO users (full_name, position, company, email) VALUES (?, ?, ?, ?)";
     
-    
     getConnection().query(queryString, [fullName, position, company, email], (err, results, fields) => {
         if (err) {
             console.log("Failed to insert new user: " + err);
