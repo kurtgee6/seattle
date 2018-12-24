@@ -50,11 +50,11 @@ router.post("/get-user-cluster", (req, res) => {
                         console.log("Failed to query for assigning user email to available cluster: " + err)
                         return
                     } 
-
+                    
+                    res.redirect('/email-success');
                 });
 
             });
-            res.end()
         }
 
         catch(err) {

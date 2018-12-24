@@ -25,4 +25,8 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname + '/../public/email-error.html'));
     });
 
+    app.get('/email-success', function (req, res) {
+        res.sendFile(path.join(__dirname + '/../public/email-success.html'));
+    });
+
 };
