@@ -28,42 +28,41 @@ router.post("/get-user-cluster", (req, res) => {
     const querySetEmailCluster = "UPDATE clusters SET clusters_email = ? WHERE id = ? ";
 
     getConnection().query(queryEmail, [email], (err, data, fields) => {
-        
+
         try {
             if (err) {
                 console.log("Failed to query for user email: " + err)
                 return
             } 
-    
+
             retrivedEmail = data[0].email;
-    
+
             getConnection().query(queryAvailableCluster, (err, data, fields) => {
                 if (err) {
                     console.log("Failed to query for available cluster: " + err)
                     return
                 } 
-        
+
                 availCluster = data[0].id;
-    
+
                 getConnection().query(querySetEmailCluster, [retrivedEmail, availCluster], (err, data, fields) => {
                     if (err) {
                         console.log("Failed to query for assigning user email to available cluster: " + err)
                         return
                     } 
-            
+
                 });
-                
+
             });
+            res.end()
         }
 
         catch(err) {
             console.log('catch');
-            return res.redirect('/user-form');
+            return res.redirect('/email-error');
         }
-    
-    })
 
-    res.end()
+    })
 });
 
 module.exports = router;

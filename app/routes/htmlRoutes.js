@@ -21,4 +21,8 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname + '/../public/get-cluster.html'));
     });
 
+    app.get('/email-error', function (req, res) {
+        res.sendFile(path.join(__dirname + '/../public/email-error.html'));
+    });
+
 };
